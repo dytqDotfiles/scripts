@@ -14,7 +14,7 @@ CMD_AMIX=$(echo $CMD_AMIX | grep "off" 2>&1)
 
 if [ -n "$CMD_AMIX" ]
 then
-	notify-send -i ""$BASE""$SIZE""$ICON_MUTE"" -t 1000 "volume mute"
+	notify-send -i ""$BASE""$SIZE""$ICON_MUTE"" -t 200 "volume mute"
 else
-	notify-send -i ""$BASE""$SIZE""$ICON_UNMUTE"" -t 1000 "volume unmute"
+	notify-send -i ""$BASE""$SIZE""$ICON_UNMUTE"" -t 200 "volume unmute"
 fi
