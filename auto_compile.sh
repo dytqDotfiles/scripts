@@ -16,6 +16,7 @@ function compile ()
 		*config.h) make ;;
 		*.c) ${CC} -o "$base".out "$1" ;;
 		*.py) python "$1" ;;
+		*bashrc) source "$1" ;;
 		*) echo "'$1' n'est pas non compatible" ;;
 	esac
 }
