@@ -1,12 +1,21 @@
 #!/bin/bash
 
 INCR=10
-BASE="/usr/local/share/icons/gnome/"
+BASE="/usr/share/icons/Adwaita/"
 SIZE="16x16"
-ICON_MUTE="/status/audio-volume-muted.png"
-ICON_UNMUTE="/status/audio-volume-high.png"
+ICON_MUTE="/status/audio-volume-muted-symbolic.symbolic.png"
+ICON_UNMUTE="/status/audio-volume-overamplified-symbolic.symbolic.png"
 
-amixer sset Master toggle >/dev/null 2>&1
+CURRENT_STATE=`amixer get Master | egrep 'Playback.*?\[o' | egrep -o '\[o.+\]'`
+
+if [[ $CURRENT_STATE == '[on]' ]]; then
+    amixer set Master mute
+else
+    amixer set Master unmute
+    amixer set Front unmute
+    amixer set Headphone unmute
+    amixer set Speaker unmute
+fi
 
 CMD_AMIX=$(amixer get Master 2>&1)
 CMD_AMIX=$(echo $CMD_AMIX | grep "off" 2>&1)

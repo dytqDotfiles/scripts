@@ -1,9 +1,9 @@
 #!/bin/bash
 
 INCR=10
-BASE="/usr/local/share/icons/gnome/"
+BASE="/usr/share/icons/Adwaita/"
 SIZE="16x16"
-ICON="/status/audio-volume-low.png"
+ICON="/status/audio-volume-low-symbolic.symbolic.png"
 
 AMIX_POURCENT=$(amixer sget Master | grep "%" | cut -f 6 -d ' ')
 
