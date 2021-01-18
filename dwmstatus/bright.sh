@@ -1,0 +1,1 @@
+echo "$(xbacklight -get PERCENT)"
