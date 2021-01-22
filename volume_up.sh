@@ -8,4 +8,4 @@ ICON="/status/audio-volume-high-symbolic.symbolic.png"
 AMIX_POURCENT=$(amixer sget Master | grep "%" | cut -f 6 -d ' ')
 
 amixer sset Master unmute "$INCR"%+ >/dev/null 2>&1
-notify-send -i ""$BASE""$SIZE""$ICON"" -t 200 "volume up $AMIX_POURCENT"
+#notify-send -i ""$BASE""$SIZE""$ICON"" -t 200 "volume up $AMIX_POURCENT"

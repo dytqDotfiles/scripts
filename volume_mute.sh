@@ -22,9 +22,9 @@ CMD_AMIX=$(echo $CMD_AMIX | grep "off" 2>&1)
 
 AMIX_POURCENT=$(amixer sget Master | grep "%" | cut -f 6 -d ' ')
 
-if [ -n "$CMD_AMIX" ]
-then
-	notify-send -i ""$BASE""$SIZE""$ICON_MUTE"" -t 500 "volume mute"
-else
-	notify-send -i ""$BASE""$SIZE""$ICON_UNMUTE"" -t 500 "volume unmute $AMIX_POURCENT"
-fi
+#if [ -n "$CMD_AMIX" ]
+#then
+#	notify-send -i ""$BASE""$SIZE""$ICON_MUTE"" -t 500 "volume mute"
+#else
+#	notify-send -i ""$BASE""$SIZE""$ICON_UNMUTE"" -t 500 "volume unmute $AMIX_POURCENT"
+#fi
