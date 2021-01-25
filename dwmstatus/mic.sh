@@ -10,5 +10,5 @@ echo ""$ICON""
 
 case $BLOCK_BUTTON in
 	1) amixer set Capture toggle ;;
-	3) xterm -e alsamixer ;;
+	3) alacritty -e alsamixer ;;
 esac

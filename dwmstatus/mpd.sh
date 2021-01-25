@@ -10,5 +10,5 @@ echo "$ICON"
 
 case $BLOCK_BUTTON in 
 	1) mpc toggle;;
-	3) xterm -e ncmpcpp;;
+	3) alacritty -e ncmpcpp;;
 esac
