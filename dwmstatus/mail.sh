@@ -1,7 +1,6 @@
 icon=""
-
 echo $icon
 
-case $BUTTON in
+case $BLOCK_BUTTON in
 	1) alacritty -e neomutt ;;
 esac
