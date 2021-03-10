@@ -3,7 +3,7 @@
 icon="X"
 
 network_sts=$(nmcli radio wifi)
-ping_test=$(ping -c 1 archlinux.org  | grep "paquets transmis")
+ ping_test=$(ping -c 1 archlinux.org  | grep "paquets transmis")
 
 if [ $network_sts == "enabled" ] 
 then
